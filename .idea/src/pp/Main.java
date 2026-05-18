@@ -5,6 +5,20 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        /*
+         *  Graph (undirected, weighted):
+         *
+         *       A --1-- B --4-- E
+         *       |       |       |
+         *       6       2       1
+         *       |       |       |
+         *       D --3-- C --5-- F
+         *
+         *  Shortest path A->F by weight:
+         *    A->B (1) -> C (2) -> F (5) = 8
+         *  BFS path (fewest hops) A->F:
+         *    A->B->E->F  or  A->B->C->F  (3 hops each – BFS finds one of them)
+         */
 
         WeightedGraph<String> graph = new WeightedGraph<>();
 
